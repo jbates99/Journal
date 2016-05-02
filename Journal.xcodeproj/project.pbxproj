@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		68816AC81BBB5405000569CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816AC71BBB5405000569CE /* AppDelegate.swift */; };
-		68816ACA1BBB5405000569CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816AC91BBB5405000569CE /* ViewController.swift */; };
 		68816ACD1BBB5405000569CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68816ACB1BBB5405000569CE /* Main.storyboard */; };
 		68816ACF1BBB5405000569CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68816ACE1BBB5405000569CE /* Assets.xcassets */; };
 		68816AD21BBB5405000569CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68816AD01BBB5405000569CE /* LaunchScreen.storyboard */; };
 		68816ADD1BBB5406000569CE /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816ADC1BBB5406000569CE /* JournalTests.swift */; };
 		68816AE81BBB5406000569CE /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816AE71BBB5406000569CE /* JournalUITests.swift */; };
+		C4ED18F21CD53A29005A5939 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F11CD53A29005A5939 /* JournalListViewController.swift */; };
+		C4ED18F41CD53A3F005A5939 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F31CD53A3F005A5939 /* JournalDetailViewController.swift */; };
+		C4ED18F61CD53E79005A5939 /* JournalEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F51CD53E79005A5939 /* JournalEntries.swift */; };
+		C4ED18FA1CD54107005A5939 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F91CD54107005A5939 /* JournalController.swift */; };
+		C4ED18FC1CD54394005A5939 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18FB1CD54394005A5939 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		68816AC41BBB5405000569CE /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68816AC71BBB5405000569CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68816AC91BBB5405000569CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68816ACC1BBB5405000569CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68816ACE1BBB5405000569CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68816AD11BBB5405000569CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		68816AE31BBB5406000569CE /* JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68816AE71BBB5406000569CE /* JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITests.swift; sourceTree = "<group>"; };
 		68816AE91BBB5406000569CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4ED18F11CD53A29005A5939 /* JournalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
+		C4ED18F31CD53A3F005A5939 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
+		C4ED18F51CD53E79005A5939 /* JournalEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntries.swift; sourceTree = "<group>"; };
+		C4ED18F91CD54107005A5939 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		C4ED18FB1CD54394005A5939 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 				68816ADB1BBB5406000569CE /* JournalTests */,
 				68816AE61BBB5406000569CE /* JournalUITests */,
 				68816AC51BBB5405000569CE /* Products */,
+				C4ED18F91CD54107005A5939 /* JournalController.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +106,11 @@
 		68816AC61BBB5405000569CE /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				C4ED18F11CD53A29005A5939 /* JournalListViewController.swift */,
+				C4ED18F31CD53A3F005A5939 /* JournalDetailViewController.swift */,
 				68816AC71BBB5405000569CE /* AppDelegate.swift */,
-				68816AC91BBB5405000569CE /* ViewController.swift */,
 				68816ACB1BBB5405000569CE /* Main.storyboard */,
+				C4ED18FD1CD5439E005A5939 /* Journal */,
 				68816ACE1BBB5405000569CE /* Assets.xcassets */,
 				68816AD01BBB5405000569CE /* LaunchScreen.storyboard */,
 				68816AD31BBB5405000569CE /* Info.plist */,
@@ -123,6 +134,15 @@
 				68816AE91BBB5406000569CE /* Info.plist */,
 			);
 			path = JournalUITests;
+			sourceTree = "<group>";
+		};
+		C4ED18FD1CD5439E005A5939 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				C4ED18F51CD53E79005A5939 /* JournalEntries.swift */,
+				C4ED18FB1CD54394005A5939 /* EntryController.swift */,
+			);
+			name = Journal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68816ACA1BBB5405000569CE /* ViewController.swift in Sources */,
+				C4ED18FC1CD54394005A5939 /* EntryController.swift in Sources */,
+				C4ED18F61CD53E79005A5939 /* JournalEntries.swift in Sources */,
+				C4ED18F21CD53A29005A5939 /* JournalListViewController.swift in Sources */,
+				C4ED18F41CD53A3F005A5939 /* JournalDetailViewController.swift in Sources */,
+				C4ED18FA1CD54107005A5939 /* JournalController.swift in Sources */,
 				68816AC81BBB5405000569CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +507,7 @@
 				68816AEE1BBB5406000569CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68816AEF1BBB5406000569CE /* Build configuration list for PBXNativeTarget "JournalTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +516,7 @@
 				68816AF11BBB5406000569CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68816AF21BBB5406000569CE /* Build configuration list for PBXNativeTarget "JournalUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +525,7 @@
 				68816AF41BBB5406000569CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
