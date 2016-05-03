@@ -68,7 +68,6 @@
                     <navigationItem key="navigationItem" title="Journal Entries" id="IbA-kX-6l6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="83y-9D-Jcu">
                             <connections>
-                                <action selector="addNewEntry:" destination="BYZ-38-t0r" id="WF0-cq-oog"/>
                                 <segue destination="61n-tH-cNm" kind="show" identifier="newEntry" id="VUc-op-fPn"/>
                             </connections>
                         </barButtonItem>
@@ -131,8 +130,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="entryName" destination="Ogs-AE-JcU" id="x3T-mQ-8hd"/>
-                        <outlet property="journalText" destination="oC7-NZ-t3P" id="1y5-fF-Yae"/>
+                        <outlet property="entryTitleTextField" destination="Ogs-AE-JcU" id="0uh-AD-D9x"/>
+                        <outlet property="journalTextView" destination="oC7-NZ-t3P" id="0gk-cL-iOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHd-zk-mYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
