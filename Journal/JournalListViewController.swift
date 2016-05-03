@@ -8,42 +8,40 @@
 
 import UIKit
 
-class JournalListViewController: UIViewController {
+class JournalListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Mark: Actions
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    @IBOutlet var tableView: UITableView!
+    let sharedEntries = JournalController.sharedController.entries
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
         tableView.reloadData()
+        
     }
     
     @IBAction func addNewEntry(sender: AnyObject) {
         
     }
     
-    @IBOutlet var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sharedEntries.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("JournalCell", forIndexPath: indexPath)
+        
+        let entryForRow = sharedEntries[indexPath.row]
+        
+        cell.textLabel?.text = entryForRow.title
+        cell.detailTextLabel?.text = "\(entryForRow.date)"
+        
+        return cell
     }
-    */
 
 }
+
+
