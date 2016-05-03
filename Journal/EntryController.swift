@@ -12,15 +12,15 @@ class JournalController {
     
     static let sharedController = JournalController()
     
-    var journal: [JournalEntry] = []
+    var entries = [Entry]()
     
     // Create, Retrieve, Update, Delete
     
-    func addEntry(name: String, date: NSDate, entry: String) {
-        let newEntry = JournalEntry(date: date, name: name, entry: entry)
-        journal.append(newEntry)
+    func addEntry(entry: Entry) {
+        entries.append(entry)
+        
     }
-    
+
     /* func retrieveEntry {
      
      }
