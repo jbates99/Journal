@@ -8,19 +8,19 @@
 
 import Foundation
 
-class JournalEntry: Equatable {
+class Entry: Equatable {
     let date: NSDate
-    let name: String
-    var entry: String
+    let title: String
+    var content: String
     
     init(date: NSDate = NSDate(), name: String, entry: String) {
         self.date = date
-        self.name = name
-        self.entry = entry
+        self.title = name
+        self.content = entry
     }
     
 }
 
-func ==(lhs: JournalEntry, rhs: JournalEntry) -> Bool {
-    return lhs.date == rhs.date && lhs.name == rhs.name && lhs.entry == rhs.entry
+func ==(lhs: Entry, rhs: Entry) -> Bool {
+    return lhs.date == rhs.date && lhs.title == rhs.title && lhs.content == rhs.content
 }
