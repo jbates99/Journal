@@ -23,8 +23,10 @@ class JournalListViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
-    @IBAction func addNewEntry(sender: AnyObject) {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        tableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
