@@ -10,37 +10,18 @@ import UIKit
 
 class JournalDetailViewController: UIViewController {
     
-    var entry: JournalEntry? {
-        didSet {
-            
-        }
-    }
+    @IBOutlet var entryTitleTextField: UITextField!
+    @IBOutlet var journalTextView: UITextView!
     
     @IBAction func saveJournal(sender: AnyObject) {
+        guard let title = entryTitleTextField.text where !title.isEmpty else { return }
+        guard !journalTextView.text.isEmpty else { return }
+        
+        let newEntry = Entry(name: title, entry: journalTextView.text)
+        
+        JournalController.sharedController.addEntry(newEntry)
+        print(JournalController.sharedController.entries)
     }
     
     
-    // Outlets
-    
-    @IBOutlet var entryName: UITextField!
-    @IBOutlet var journalText: UITextView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
