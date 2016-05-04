@@ -19,6 +19,7 @@ class Entry: Equatable {
         self.content = entry
     }
     
+    
 }
 
 func ==(lhs: Entry, rhs: Entry) -> Bool {

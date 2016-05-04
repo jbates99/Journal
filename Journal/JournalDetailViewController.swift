@@ -21,6 +21,7 @@ class JournalDetailViewController: UIViewController {
         
         JournalController.sharedController.addEntry(newEntry)
         print(JournalController.sharedController.entries)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     

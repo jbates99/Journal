@@ -13,7 +13,7 @@ class JournalListViewController: UIViewController, UITableViewDataSource, UITabl
     // Mark: Actions
     
     @IBOutlet var tableView: UITableView!
-    let sharedEntries = JournalController.sharedController.entries
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +30,20 @@ class JournalListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sharedEntries.count
+        return JournalController.sharedController.entries.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("JournalCell", forIndexPath: indexPath)
         
-        let entryForRow = sharedEntries[indexPath.row]
+        let entryForRow = JournalController.sharedController.entries[indexPath.row]
         
         cell.textLabel?.text = entryForRow.title
         cell.detailTextLabel?.text = "\(entryForRow.date)"
         
         return cell
     }
+
 
 }
 

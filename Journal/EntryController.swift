@@ -20,20 +20,13 @@ class JournalController {
         entries.append(entry)
         
     }
-
-    /* func retrieveEntry {
-     
-     }
-     */
     
-    /*
-     func updateEntry {
-     }
-     */
+    func removeEntry(entry: Entry) {
+        
+        if let entryIndex = entries.indexOf(entry) {
+            entries.removeAtIndex(entryIndex)
+        }
+    }
     
-    /* func deleteEntry {
-     
-     }
-     */
     
 }
