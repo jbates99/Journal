@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" id="9wh-2S-aUd">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tji-QD-t8M">
                             <connections>
-                                <action selector="saveJournal:" destination="61n-tH-cNm" id="rOP-gr-SHt"/>
+                                <action selector="saveJournal:" destination="61n-tH-cNm" id="CUS-lZ-b0r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
