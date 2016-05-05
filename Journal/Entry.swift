@@ -19,6 +19,11 @@ class Entry: Equatable {
         self.content = entry
     }
     
+    convenience init() {
+        self.init(date: NSDate(), name: "", entry: "")
+        
+    }
+    
     
 }
 

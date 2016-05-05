@@ -15,7 +15,7 @@
 		68816AE81BBB5406000569CE /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816AE71BBB5406000569CE /* JournalUITests.swift */; };
 		C4ED18F21CD53A29005A5939 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F11CD53A29005A5939 /* JournalListViewController.swift */; };
 		C4ED18F41CD53A3F005A5939 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F31CD53A3F005A5939 /* JournalDetailViewController.swift */; };
-		C4ED18F61CD53E79005A5939 /* JournalEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F51CD53E79005A5939 /* JournalEntries.swift */; };
+		C4ED18F61CD53E79005A5939 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F51CD53E79005A5939 /* Entry.swift */; };
 		C4ED18FA1CD54107005A5939 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18F91CD54107005A5939 /* JournalController.swift */; };
 		C4ED18FC1CD54394005A5939 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED18FB1CD54394005A5939 /* EntryController.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		68816AE91BBB5406000569CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4ED18F11CD53A29005A5939 /* JournalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
 		C4ED18F31CD53A3F005A5939 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
-		C4ED18F51CD53E79005A5939 /* JournalEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntries.swift; sourceTree = "<group>"; };
+		C4ED18F51CD53E79005A5939 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		C4ED18F91CD54107005A5939 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		C4ED18FB1CD54394005A5939 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +139,7 @@
 		C4ED18FD1CD5439E005A5939 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				C4ED18F51CD53E79005A5939 /* JournalEntries.swift */,
+				C4ED18F51CD53E79005A5939 /* Entry.swift */,
 				C4ED18FB1CD54394005A5939 /* EntryController.swift */,
 			);
 			name = Journal;
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4ED18FC1CD54394005A5939 /* EntryController.swift in Sources */,
-				C4ED18F61CD53E79005A5939 /* JournalEntries.swift in Sources */,
+				C4ED18F61CD53E79005A5939 /* Entry.swift in Sources */,
 				C4ED18F21CD53A29005A5939 /* JournalListViewController.swift in Sources */,
 				C4ED18F41CD53A3F005A5939 /* JournalDetailViewController.swift in Sources */,
 				C4ED18FA1CD54107005A5939 /* JournalController.swift in Sources */,

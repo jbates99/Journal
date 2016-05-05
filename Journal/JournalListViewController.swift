@@ -43,22 +43,20 @@ class JournalListViewController: UIViewController, UITableViewDataSource, UITabl
         
         return cell
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let detailViewController = segue.destinationViewController as? JournalDetailViewController else { fatalError("unexpected destination from segue") }
         if segue.identifier == "SeeJournal" {
-            if let detailViewController = segue.destinationViewController as? JournalDetailViewController {
-                
-                _ = detailViewController.view
-                
-                let indexPath = tableView.indexPathForSelectedRow
-                
-                if let selectedRow = indexPath?.row {
-                    let entry = JournalController.sharedController.entries[selectedRow]
-                    detailViewController.entryTitleTextField.text = entry.title
-                    detailViewController.journalTextView.text = entry.content
-                }
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                let entry = JournalController.sharedController.entries[selectedIndexPath.row]
+                detailViewController.entry = entry
+                detailViewController.entryType = .existing
             }
+        } else if segue.identifier == "newEntry" {
+            detailViewController.entryType = .new
         }
     }
+    
 }
 
 

@@ -21,6 +21,10 @@ class JournalController {
         
     }
     
+    func updateEntry(entry: Entry) {
+        
+    }
+    
     func removeEntry(entry: Entry) {
         
         if let entryIndex = entries.indexOf(entry) {
