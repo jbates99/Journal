@@ -25,6 +25,7 @@ class JournalController {
     
     func addEntry(entry: Entry) {
         entries.append(entry)
+        saveToPersistentStorage()
     }
     
     func removeEntry(entry: Entry) {
@@ -34,7 +35,7 @@ class JournalController {
     }
     
     func loadFromPersistentStorage() {
-        let entryDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(entriesKey) as? [Dictionary<String, AnyObject>]
+        let entryDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(entriesKey) as? [[String: AnyObject]]
         if let entryDictionaries = entryDictionariesFromDefaults {
             self.entries = entryDictionaries.map ( { Entry(dictionary: $0)! } )
         }

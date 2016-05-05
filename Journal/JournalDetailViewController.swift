@@ -22,6 +22,7 @@ class JournalDetailViewController: UIViewController {
     var entry = Entry()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         entryTitleTextField.text = entry.title
         journalTextView.text = entry.content
     }
