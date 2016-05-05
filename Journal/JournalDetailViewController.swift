@@ -29,31 +29,23 @@ class JournalDetailViewController: UIViewController {
     @IBAction func saveJournal(sender: AnyObject) {
         switch entryType {
         case .new:
-            saveNewEntry()
+            saveEntry(true)
         case .existing:
-            updateEntry()
+            saveEntry(false)
         }
     }
     
-    func updateEntry() {
-        updateValues()
-        navigationController?.popViewControllerAnimated(true)
-    }
-    
-    func saveNewEntry() {
-        updateValues()
-        
-        JournalController.sharedController.addEntry(entry)
-        
-        navigationController?.popViewControllerAnimated(true)
-    }
-    
-    private func updateValues() {
+    private func saveEntry(add: Bool) {
         guard let title = entryTitleTextField.text where !title.isEmpty else { return }
         guard !journalTextView.text.isEmpty else { return }
         entry.title = title
         entry.content = journalTextView.text
         entry.date = NSDate()
+        
+        if add == true {
+            JournalController.sharedController.addEntry(entry)
+        }
+        navigationController?.popViewControllerAnimated(true)
     }
     
 }

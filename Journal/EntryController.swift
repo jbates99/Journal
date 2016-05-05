@@ -18,11 +18,6 @@ class JournalController {
     
     func addEntry(entry: Entry) {
         entries.append(entry)
-        
-    }
-    
-    func updateEntry(entry: Entry) {
-        
     }
     
     func removeEntry(entry: Entry) {
