@@ -1,5 +1,5 @@
 //
-//  JournalEntries.swift
+//  Entry.swift
 //  Journal
 //
 //  Created by Joshua Bates on 4/30/16.
@@ -9,6 +9,10 @@
 import Foundation
 
 class Entry: Equatable {
+    
+    private let dateKey = "date"
+    private let titleKey = "title"
+    private let contentKey = "content"
     
     var date: NSDate
     var title: String
@@ -20,9 +24,19 @@ class Entry: Equatable {
         self.content = entry
     }
     
+    init?(dictionary: [String : AnyObject]) {
+        guard let date = dictionary[dateKey] as? NSDate, title = dictionary[titleKey] as? String, content = dictionary[contentKey] as? String else { return nil }
+        self.date = date
+        self.content = content
+        self.title = title
+    }
+    
     convenience init() {
         self.init(date: NSDate(), name: "", entry: "")
-        
+    }
+    
+    func dictionaryCopy() -> [String : AnyObject] {
+        return [dateKey : self.date, contentKey : self.content, titleKey : self.title]
     }
     
 }
