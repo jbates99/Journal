@@ -36,21 +36,25 @@ class JournalDetailViewController: UIViewController {
     }
     
     func updateEntry() {
-        
+        updateValues()
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func saveNewEntry() {
+        updateValues()
+        
+        JournalController.sharedController.addEntry(entry)
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    private func updateValues() {
         guard let title = entryTitleTextField.text where !title.isEmpty else { return }
         guard !journalTextView.text.isEmpty else { return }
-        
-        let newEntry = Entry(name: title, entry: journalTextView.text)
-        
-        JournalController.sharedController.addEntry(newEntry)
-        print(JournalController.sharedController.entries)
-        navigationController?.popViewControllerAnimated(true)
-        
-        entryTitleTextField.text = nil
-        journalTextView.text = nil
+        entry.title = title
+        entry.content = journalTextView.text
+        entry.date = NSDate()
     }
+    
 }
 

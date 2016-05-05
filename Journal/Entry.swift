@@ -9,8 +9,9 @@
 import Foundation
 
 class Entry: Equatable {
-    let date: NSDate
-    let title: String
+    
+    var date: NSDate
+    var title: String
     var content: String
     
     init(date: NSDate = NSDate(), name: String, entry: String) {
@@ -23,7 +24,6 @@ class Entry: Equatable {
         self.init(date: NSDate(), name: "", entry: "")
         
     }
-    
     
 }
 
